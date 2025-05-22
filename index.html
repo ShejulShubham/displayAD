@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisement</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="ad-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator" id="stepIndicator">1/4</div>
+
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <div class="welcome-screen">
+                <h1><strong>🌍</strong> Geography Quiz</h1>
+                <p>Test your knowledge of European countries!</p>
+                <p>Can you identify the correct locations?</p>
+                <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Question 1 Screen -->
+        <div class="screen" id="question1Screen">
+            <div class="question-screen">
+                <h2>Question 1</h2>
+                <p><strong>Where is Italy?</strong></p>
+                <div class="map-container">
+                    <div title="italy" class="map-pin pin-italy" data-country="italy"
+                        onclick="selectCountry('italy', 1)"></div>
+                    <div title="france" class="map-pin pin-france" data-country="france"
+                        onclick="selectCountry('france', 1)"></div>
+                    <div title="spain" class="map-pin pin-spain" data-country="spain"
+                        onclick="selectCountry('spain', 1)"></div>
+                    <div title="germany" class="map-pin pin-germany" data-country="germany"
+                        onclick="selectCountry('germany', 1)"></div>
+                    <div title="england" class="map-pin pin-england" data-country="england"
+                        onclick="selectCountry('england', 1)"></div>
+                    <div title="poland" class="map-pin pin-poland" data-country="poland"
+                        onclick="selectCountry('poland', 1)"></div>
+                    <div title="sweden" class="map-pin pin-sweden" data-country="sweden"
+                        onclick="selectCountry('sweden', 1)"></div>
+                    <div title="norway" class="map-pin pin-norway" data-country="norway"
+                        onclick="selectCountry('norway', 1)"></div>
+                </div>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+        </div>
+
+        <!-- Question 2 Screen -->
+        <div class="screen" id="question2Screen">
+            <div class="question-screen">
+                <h2>Question 2</h2>
+                <p><strong>Where is France?</strong></p>
+                <div class="map-container">
+                    <div title="italy" class="map-pin pin-italy" data-country="italy"
+                        onclick="selectCountry('italy', 2)"></div>
+                    <div title="france" class="map-pin pin-france" data-country="france"
+                        onclick="selectCountry('france', 2)"></div>
+                    <div title="spain" class="map-pin pin-spain" data-country="spain"
+                        onclick="selectCountry('spain', 2)"></div>
+                    <div title="germany" class="map-pin pin-germany" data-country="germany"
+                        onclick="selectCountry('germany', 2)"></div>
+                    <div title="england" class="map-pin pin-england" data-country="england"
+                        onclick="selectCountry('england', 2)"></div>
+                    <div title="poland" class="map-pin pin-poland" data-country="poland"
+                        onclick="selectCountry('poland', 2)"></div>
+                    <div title="sweden" class="map-pin pin-sweden" data-country="sweden"
+                        onclick="selectCountry('sweden', 2)"></div>
+                    <div title="norway" class="map-pin pin-norway" data-country="norway"
+                        onclick="selectCountry('norway', 2)"></div>
+                </div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+        </div>
+
+        <!-- Video Screen -->
+        <div class="screen" id="videoScreen">
+            <div class="video-screen">
+                <div class="video-container">
+                    <video id="adVideo" muted autoplay loop>
+                        <source src="./public/_materials/ulajh.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="unmute-btn" id="unmuteBtn" onclick="toggleMute()">🔊 Unmute</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
